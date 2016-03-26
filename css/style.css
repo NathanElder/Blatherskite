@@ -1,0 +1,187 @@
+@import url(http://fonts.googleapis.com/css?family=Share+Tech|Oswald);
+/*   Creator of Blatherskite = eldercode.net*/
+button {
+  color:#111;
+  font-size:1.5em;
+  font-family:Oswald;
+  text-transform:uppercase;
+  background-color:#79ADE3;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+button:hover {
+  background-color:#2D7BCD;
+}
+
+#buttons{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 40px;
+    border: 3px solid #3022e2;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2);
+    text-align:center;
+    overflow-y: scroll;
+    height: 100px;
+    position:fixed;
+    bottom:10px;
+    left: 5px;
+    right: 5px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#MainViewer{
+    background: transparent;
+    font-family:'Share Tech',sans-serif;
+    color: #FF5600;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 15%;
+    padding-bottom: 375px;
+    overflow-x: scroll;
+    z-index: -2;
+}
+
+#buttons::-webkit-scrollbar, #MainViewer::-webkit-scrollbar { 
+    display: none; 
+}
+
+#answer{
+    opacity: 0;
+    -moz-animation: fadein 3s ease-in 1.2s forwards;
+    -webkit-animation: fadein 3s ease-in 1.2s forwards;
+    -o-animation: fadein 3s ease-in 1.2s forwards;
+    animation: fadein 3s ease-in 1.2s forwards;  
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.onscreen, .stars, .twinkling, .clouds {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.onscreen{background-image: url(../img/Onscreen_Final.png);background-size:cover; background-position: center; width: 100%; height: 100%; background-repeat: no-repeat; z-index: -1;}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;background-size: cover;
+  z-index:-10;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:-10;
+
+  -moz-animation:move-twink-back 500s linear infinite;
+  -ms-animation:move-twink-back 500s linear infinite;
+  -o-animation:move-twink-back 500s linear infinite;
+  -webkit-animation:move-twink-back 500s linear infinite;
+  animation:move-twink-back 500s linear infinite;
+}
+
+.clouds{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png)repeat center center;
+    z-index:-10;
+
+  -moz-animation:move-clouds-back 500s linear infinite;
+  -ms-animation:move-clouds-back 500s linear infinite;
+  -o-animation:move-clouds-back 500s linear infinite;
+  -webkit-animation:move-clouds-back 500s linear infinite;
+  animation:move-clouds-back 500s linear infinite;
+}
+#dicebutton{width: 190px;}
+/*DICE*/
+input{font-size: 1em;text-align: center; width: 40px; border-radius: 20px;color: #FF5600;}
+#NumDice, #NumSides {background-color: none;}
+input[type="text"] {background-color: transparent; border-color: #318d8d;}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-width: 1200px) 
+  and (max-width: 1700px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+#MainViewer{font-size: 2.5em;}
+button{font-size: 2em;}
+#buttons{width: 650px; height: 235px;}
+#dicebutton{width: 220px;}
+}
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-width: 1200px) 
+  and (max-width: 1700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+#MainViewer{font-size: 2.5em;}
+button{font-size: 2em;}
+#buttons{width: 650px; height: 235px;bottom: 20px;}
+#dicebutton{width: 220px;}
+}

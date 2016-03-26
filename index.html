@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--   Creator of Blatherskite = eldercode.net-->
+  <title>Blatherskite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-10" id="MainViewer"><p>Does <b>Q </b>have your tongue? </p><p id="answer"><em>Energize a button below:</em></p>
+        </div>
+    </div>
+    
+<div class="row">
+    <div class="col-sm-8  col-md-6  col-lg-4 col-centered" id="buttons">
+      
+<!--TECHNICAL BABBLE        -->
+<button type="button"  onclick="Technical()">Technical</button>
+<!-- UNHEALTH BABBLE       -->
+<button type="button" onclick="Unhealth()">Unhealth</button>
+<!--ENGINEERING BABBLE        -->
+<button type="button" onclick="Engineering()">Engineering</button> 
+<!--COMPUTER-->
+<button type="button" onclick="Computer()">Computer</button>       
+<!--COUNTERMEASURE-->
+<button type="button" onclick="Countermeasure()">Countermeasure</button>
+<!-- COMPOSITION       -->
+<button type="button" onclick="Composition()">Composition</button>
+<!-- ADVENTURE       -->
+<button type="button" onclick="Quandary()">Quandary</button>
+<!-- NPC       -->
+<button type="button" onclick="NPC()">NPC</button>
+<!--FOOD        -->
+<button type="button" onclick="Epicure()">Epicure</button>
+<!--PRIME DIRECTIVE-->
+<button type="button" onclick="Prime()">Prime Directive</button> 
+<!--DICE-->
+<button type="button" id="dicebutton" onclick="RollDice()">Dice <input type="text" id="NumDice" />Sides <input type="text" id="NumSides" /></button>
+      </div>
+    </div>      
+  </div>
+
+    
+<div class="onscreen"></div>    
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+
+    <script src="js/index.js"></script>    
+</body>
+</html>
